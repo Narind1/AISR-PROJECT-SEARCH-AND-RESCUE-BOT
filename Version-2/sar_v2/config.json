@@ -1,0 +1,10 @@
+{
+  "label": "manual",
+  "n_robots": 5,
+  "n_victims": 3,
+  "comm": true,
+  "range": 1.0,
+  "seed": 1,
+  "time_limit": 500,
+  "auto_quit": false
+}

@@ -1,0 +1,189 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+  basicTimeStep 32
+}
+Viewpoint {
+  orientation 0 1 0 1.5708
+  position 0 0 3.2
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  wallHeight 0.1
+}
+Robot {
+  name "referee"
+  controller "sar_supervisor"
+  supervisor TRUE
+}
+Solid {
+  translation -0.6 -0.4 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.55 0.55 0.58 roughness 1 metalness 0 } geometry Box { size 0.8 0.02 0.1 } } ]
+  name "wall_A1"
+  boundingObject Box { size 0.8 0.02 0.1 }
+}
+Solid {
+  translation 0.6 -0.4 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.55 0.55 0.58 roughness 1 metalness 0 } geometry Box { size 0.8 0.02 0.1 } } ]
+  name "wall_A2"
+  boundingObject Box { size 0.8 0.02 0.1 }
+}
+Solid {
+  translation 0.2 0.3 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.55 0.55 0.58 roughness 1 metalness 0 } geometry Box { size 1.6 0.02 0.1 } } ]
+  name "wall_B"
+  boundingObject Box { size 1.6 0.02 0.1 }
+}
+Solid {
+  translation 0.3 0.825 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.55 0.55 0.58 roughness 1 metalness 0 } geometry Box { size 0.02 0.35 0.1 } } ]
+  name "wall_C"
+  boundingObject Box { size 0.02 0.35 0.1 }
+}
+Solid {
+  translation -0.5 -0.62 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.40 0.26 0.12 roughness 1 metalness 0 } geometry Box { size 0.2 0.2 0.1 } } ]
+  name "rubble1"
+  boundingObject Box { size 0.2 0.2 0.1 }
+}
+Solid {
+  translation 0.5 -0.65 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.40 0.26 0.12 roughness 1 metalness 0 } geometry Box { size 0.25 0.15 0.1 } } ]
+  name "rubble2"
+  boundingObject Box { size 0.25 0.15 0.1 }
+}
+Solid {
+  translation 0.0 0.0 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.40 0.26 0.12 roughness 1 metalness 0 } geometry Box { size 0.2 0.2 0.1 } } ]
+  name "rubble3"
+  boundingObject Box { size 0.2 0.2 0.1 }
+}
+Solid {
+  translation -0.35 0.1 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.40 0.26 0.12 roughness 1 metalness 0 } geometry Box { size 0.15 0.25 0.1 } } ]
+  name "rubble4"
+  boundingObject Box { size 0.15 0.25 0.1 }
+}
+Solid {
+  translation -0.2 0.55 0.05
+  children [ Shape { appearance PBRAppearance { baseColor 0.40 0.26 0.12 roughness 1 metalness 0 } geometry Box { size 0.15 0.15 0.1 } } ]
+  name "rubble5"
+  boundingObject Box { size 0.15 0.15 0.1 }
+}
+Solid {
+  translation -0.75 0.75 0.04
+  children [ Shape { appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 } geometry Cylinder { height 0.08 radius 0.04 } } ]
+  name "victim1"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+Solid {
+  translation 0.0 0.7 0.04
+  children [ Shape { appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 } geometry Cylinder { height 0.08 radius 0.04 } } ]
+  name "victim2"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+Solid {
+  translation 0.7 0.75 0.04
+  children [ Shape { appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 } geometry Cylinder { height 0.08 radius 0.04 } } ]
+  name "victim3"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+Solid {
+  translation 0.75 0.0 0.04
+  children [ Shape { appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 } geometry Cylinder { height 0.08 radius 0.04 } } ]
+  name "victim4"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+Solid {
+  translation -0.8 -0.05 0.04
+  children [ Shape { appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 } geometry Cylinder { height 0.08 radius 0.04 } } ]
+  name "victim5"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+Solid {
+  translation 0.5 0.5 0.04
+  children [ Shape { appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 } geometry Cylinder { height 0.08 radius 0.04 } } ]
+  name "victim6"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+E-puck {
+  translation -0.8 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck0"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
+E-puck {
+  translation -0.6 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck1"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
+E-puck {
+  translation -0.4 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck2"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
+E-puck {
+  translation -0.2 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck3"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
+E-puck {
+  translation 0.0 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck4"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
+E-puck {
+  translation 0.2 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck5"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
+E-puck {
+  translation 0.4 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck6"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
+E-puck {
+  translation 0.6 -0.92 0
+  rotation 0 0 1 1.5708
+  name "epuck7"
+  controller "epuck_sar"
+  camera_width 40
+  camera_height 40
+  turretSlot [ Emitter { name "radio_tx" range -1 } Receiver { name "radio_rx" } GPS { name "gps" } InertialUnit { name "imu" } ]
+}
