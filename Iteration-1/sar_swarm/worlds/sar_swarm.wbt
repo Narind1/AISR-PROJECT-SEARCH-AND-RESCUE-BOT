@@ -1,0 +1,56 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+  basicTimeStep 32
+}
+Viewpoint {
+  orientation 0 1 0 1.5708
+  position 0 0 3
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+  wallHeight 0.1
+}
+
+WoodenBox { translation 0.3 0.2 0.05 name "box1" size 0.2 0.2 0.1 }
+WoodenBox { translation -0.4 -0.3 0.05 name "box2" size 0.25 0.15 0.1 }
+WoodenBox { translation 0.0 -0.6 0.05 name "box3" size 0.15 0.3 0.1 }
+
+DEF V1 Solid {
+  translation 0.7 0.6 0.04
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 }
+      geometry Cylinder { height 0.08 radius 0.04 }
+    }
+  ]
+  name "victim1"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+DEF V2 Solid {
+  translation -0.7 0.5 0.04
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 1 0 0 emissiveColor 1 0 0 roughness 1 metalness 0 }
+      geometry Cylinder { height 0.08 radius 0.04 }
+    }
+  ]
+  name "victim2"
+  boundingObject Cylinder { height 0.08 radius 0.04 }
+}
+
+E-puck { translation -0.8 -0.8 0 name "epuck0" controller "epuck_sar" camera_width 40 camera_height 40 turretSlot [ Emitter { name "radio_tx" range 1.0 } Receiver { name "radio_rx" } ] }
+E-puck { translation -0.6 -0.8 0 name "epuck1" controller "epuck_sar" camera_width 40 camera_height 40 turretSlot [ Emitter { name "radio_tx" range 1.0 } Receiver { name "radio_rx" } ] }
+E-puck { translation -0.4 -0.8 0 name "epuck2" controller "epuck_sar" camera_width 40 camera_height 40 turretSlot [ Emitter { name "radio_tx" range 1.0 } Receiver { name "radio_rx" } ] }
+E-puck { translation -0.2 -0.8 0 name "epuck3" controller "epuck_sar" camera_width 40 camera_height 40 turretSlot [ Emitter { name "radio_tx" range 1.0 } Receiver { name "radio_rx" } ] }
+E-puck { translation 0.0 -0.8 0 name "epuck4" controller "epuck_sar" camera_width 40 camera_height 40 turretSlot [ Emitter { name "radio_tx" range 1.0 } Receiver { name "radio_rx" } ] }
